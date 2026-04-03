@@ -1,41 +1,11 @@
-<svg viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg" fill="none">
-  <defs>
-    <filter id="neon" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="3" result="blur1"/>
-      <feGaussianBlur stdDeviation="6" result="blur2"/>
-      <feMerge>
-        <feMergeNode in="blur2"/>
-        <feMergeNode in="blur1"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#c4b5fd"/>
-      <stop offset="50%" stop-color="#818cf8"/>
-      <stop offset="100%" stop-color="#67e8f9"/>
-    </linearGradient>
-  </defs>
+<svg width="100%" viewBox="0 0 680 480" xmlns="http://www.w3.org/2000/svg">
 
-  <!-- A letter — elegant serif with swash -->
-  <g filter="url(#neon)">
-    <!-- A left stroke with swash tail -->
-    <path d="M52 110 Q44 118 38 122 Q30 128 28 124 Q24 118 34 106 Q42 96 52 90 L72 38 L78 38 Z"
-          fill="url(#g1)" opacity="0.95"/>
-    <!-- A right stroke -->
-    <path d="M78 38 L100 110 L92 110 L72 38 Z"
-          fill="url(#g1)" opacity="0.95"/>
-    <!-- A crossbar -->
-    <path d="M55 80 L88 80 L86 88 L57 88 Z"
-          fill="url(#g1)" opacity="0.85"/>
+  <circle cx="340" cy="240" r="175" fill="#0D0F2B"/>
 
-    <!-- C letter — open serif C -->
-    <path d="M178 52 Q192 44 196 56 Q198 62 194 64 Q188 58 178 62 Q158 70 152 90 Q146 110 158 120 Q168 128 182 122 Q194 116 198 106 Q200 100 196 98 Q190 104 178 108 Q165 112 158 102 Q150 90 156 72 Q162 56 178 52 Z"
-          fill="url(#g1)" opacity="0.95"/>
-  </g>
+  <path d="M285 195 A55 55 0 0 1 395 195" stroke="#FF8A80" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <line x1="285" y1="195" x2="395" y2="195" stroke="#FF8A80" stroke-width="9" stroke-linecap="round"/>
+  <line x1="296" y1="218" x2="384" y2="218" stroke="#FF8A80" stroke-width="9" stroke-linecap="round"/>
+  <line x1="307" y1="241" x2="373" y2="241" stroke="#FF8A80" stroke-width="9" stroke-linecap="round"/>
 
-  <!-- AUDITOR text -->
-  <text x="110" y="150" text-anchor="middle"
-        font-family="'Segoe UI', system-ui, sans-serif"
-        font-size="13" font-weight="300" letter-spacing="6"
-        fill="url(#g1)" filter="url(#neon)" opacity="0.9">AUDITOR</text>
+  <text x="340" y="308" text-anchor="middle" font-family="Orbitron, 'Courier New', monospace" font-size="22" font-weight="500" fill="#FF8A80">AI CODE AUDITOR</text>
 </svg>

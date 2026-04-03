@@ -158,7 +158,7 @@ export default function Home() {
       {/* Header */}
       <header className="header">
         <div className="header-logo">
-          <div className="logo-title">AI Code Auditor</div>
+          <img src="/logo.svg" alt="AI Code Auditor" className="logo-img" />
           <div className="logo-sub">Powered by imbanytui · Optimistic Democracy Consensus</div>
         </div>
         <div className="header-status">
