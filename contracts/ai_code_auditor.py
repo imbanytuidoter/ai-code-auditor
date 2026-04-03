@@ -247,6 +247,10 @@ class AICodeAuditor(gl.Contract):
         """Run an AI audit and return the result as JSON without storing it."""
         if not source_code or len(source_code.strip()) < 10:
             raise Exception("Source code is too short or empty")
+        if len(source_code) > MAX_SOURCE_LEN:
+            raise Exception(f"Source code too large (max {MAX_SOURCE_LEN} chars)")
+        if len(audit_policy) > MAX_POLICY_LEN:
+            raise Exception(f"Audit policy too long (max {MAX_POLICY_LEN} chars)")
 
         audit_data = self._run_audit(source_code, audit_policy)
         findings   = audit_data.get("findings", [])

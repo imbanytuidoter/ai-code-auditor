@@ -97,7 +97,7 @@ export default function Home() {
   const startTimeRef = useRef<number>(0);
 
   useEffect(() => {
-    const stored = parseInt(localStorage.getItem("gl_audits") || "0");
+    const stored = parseInt(localStorage.getItem("gl_audits") || "0", 10);
     const storedAvg = parseFloat(localStorage.getItem("gl_avgtime") || "0");
     setAuditsRun(stored);
     setAvgTime(storedAvg);
@@ -123,6 +123,10 @@ export default function Home() {
   const handleAudit = useCallback(async () => {
     if (!code.trim()) {
       toast.error("Please paste your smart contract code first");
+      return;
+    }
+    if (code.length > 40_000) {
+      toast.error("Contract too large (max 40 KB)");
       return;
     }
     setStep("waiting");
