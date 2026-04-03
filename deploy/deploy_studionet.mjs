@@ -7,7 +7,8 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const privateKey = process.env.DEPLOYER_PRIVATE_KEY || "0x5b58a9baa0de4ff9db103511f97db85a82259be47ad983556077d18f0687846e";
+const privateKey = process.env.DEPLOYER_PRIVATE_KEY;
+if (!privateKey) throw new Error("Set DEPLOYER_PRIVATE_KEY env variable");
 const account = createAccount(privateKey);
 const client = createClient({ chain: studionet, account });
 

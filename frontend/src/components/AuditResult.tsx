@@ -21,7 +21,7 @@ export function AuditResult({ report, findings }: Props) {
         <div className="banner-info">
           <div className="banner-title">AI Analysis Complete</div>
           <div className="banner-sub">
-            {(report.language ?? "unknown").toUpperCase()} · {(report.submitter ?? "").slice(0, 14)}...
+            {(report.language ?? "unknown").toUpperCase()} · GenLayer Studionet
           </div>
         </div>
         <span className={`deploy-badge ${report.safe_to_deploy ? "safe" : "unsafe"}`}>

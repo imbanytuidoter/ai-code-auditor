@@ -1,21 +1,20 @@
 # AI Code Auditor
 
 > Decentralized smart contract security auditor powered by GenLayer AI validators.
-> Paste Solidity, Vyper, or Python code — get an on-chain AI security report instantly.
+> Paste Solidity, Vyper, or Python code — get an AI-driven security report instantly.
 
 Built for the **GenLayer Bradbury Builders Hackathon 2026**.
-
-🔗 **Live demo:** [Deploy on Vercel — see below]
 
 ---
 
 ## What It Does
 
-1. **Paste** your smart contract (Solidity, Vyper, Python)
-2. **AI Analysis** — GenLayer's LLM validators scan for vulnerabilities
-3. **Report** — Risk score, severity breakdown, findings with recommendations
+1. **Paste** your smart contract (Solidity, Vyper, or Python)
+2. **AI Analysis** — GenLayer LLM validators scan for vulnerabilities using `exec_prompt`
+3. **Report** — Risk score 0–10, severity breakdown, and detailed findings with recommendations
 
-Vulnerability categories: reentrancy, access control, integer overflow, front-running, unchecked returns, DoS, timestamp dependence, tx.origin auth, flash loan attacks, oracle manipulation, and more.
+**Vulnerability categories detected:**
+reentrancy · access control · integer overflow · front-running · unchecked returns · denial of service · timestamp dependence · tx.origin auth · flash loan attacks · oracle manipulation · self-destruct · delegatecall · signature replay · logic errors
 
 ---
 
@@ -23,11 +22,11 @@ Vulnerability categories: reentrancy, access control, integer overflow, front-ru
 
 | Layer | Technology |
 |-------|-----------|
-| Blockchain | [GenLayer Studionet](https://studio.genlayer.com) |
-| Smart Contract | Python Intelligent Contract (`contracts/ai_code_auditor.py`) |
-| AI Consensus | GenLayer LLM validators via `exec_prompt_session` |
-| Frontend | Next.js 15, TypeScript, pure CSS |
-| Web3 Client | genlayer-js 0.28.2 |
+| Blockchain | GenLayer Studionet |
+| Smart Contract | Python Intelligent Contract |
+| AI | `exec_prompt` + `eq_principle.strict_eq` |
+| Frontend | Next.js 15, TypeScript |
+| Web3 Client | genlayer-js |
 
 ---
 
@@ -37,13 +36,13 @@ Vulnerability categories: reentrancy, access control, integer overflow, front-ru
 ├── contracts/
 │   └── ai_code_auditor.py     # GenLayer Intelligent Contract
 ├── deploy/
-│   └── deploy_studionet.mjs   # Deploy script for Studionet
+│   └── deploy_studionet.mjs   # Deploy script
 ├── frontend/
-│   ├── src/app/               # Next.js 15 pages + CSS
+│   ├── src/app/               # Next.js pages + CSS
 │   ├── src/components/        # AuditResult, FindingCard, SeverityBadge
-│   └── src/lib/               # GenLayer client, types, contract address
+│   └── src/lib/               # GenLayer client + contract address
 └── test/
-    └── test_auditor.py        # Test suite
+    └── test_auditor.py
 ```
 
 ---
@@ -53,13 +52,28 @@ Vulnerability categories: reentrancy, access control, integer overflow, front-ru
 ```bash
 cd frontend
 npm install
-cp .env.example .env.local     # add your NEXT_PUBLIC_DEMO_PRIVATE_KEY
+cp .env.example .env.local
+# Edit .env.local and add your GenLayer testnet private key
 npm run dev
-# Open http://localhost:3000
 ```
+
+Open [http://localhost:3000](http://localhost:3000)
 
 ---
 
+## Deploy
 
+The frontend deploys to Vercel (set root directory to `frontend`).
+The Intelligent Contract is deployed on GenLayer Studionet — address in `frontend/src/lib/contract.ts`.
 
+---
 
+## GenLayer Hackathon Compliance
+
+| Requirement | Implementation |
+|---|---|
+| Intelligent Contract in Python | `contracts/ai_code_auditor.py` |
+| AI via `exec_prompt` | LLM-based vulnerability analysis |
+| Equivalence Principle | `gl.eq_principle.strict_eq` with deterministic JSON |
+| Deployed on GenLayer | GenLayer Studionet |
+| Real-world use case | Smart contract security — critical Web3 infrastructure |

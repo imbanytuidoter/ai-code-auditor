@@ -16,7 +16,7 @@ export function FindingCard({ finding, index }: { finding: Finding; index: numbe
             {finding.title}
             <span className="finding-cat">{finding.category}</span>
           </div>
-          <div className="finding-location">📍 {finding.location}</div>
+          <div className="finding-location">{finding.location}</div>
         </div>
         <span className={`finding-arrow${open ? " open" : ""}`}>▼</span>
       </button>

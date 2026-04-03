@@ -11,7 +11,6 @@ function getClient() {
 
 export type AuditReport = {
   submission_id: string;
-  submitter: string;
   language: string;
   overall_risk: "low" | "medium" | "high" | "critical" | "unknown";
   risk_score: number;
@@ -36,10 +35,6 @@ export type Finding = {
   recommendation: string;
 };
 
-/**
- * Run an AI audit via the GenLayer leader node (no on-chain storage).
- * Returns the result immediately — ideal for demo use.
- */
 export async function previewAudit(
   sourceCode: string,
   auditPolicy: string
@@ -66,7 +61,6 @@ export async function previewAudit(
   const findings = (parsed.findings as Finding[]) ?? [];
   const report: AuditReport = {
     submission_id: (parsed.submission_id as string) ?? "preview",
-    submitter:     (parsed.submitter as string) ?? "",
     language:      (parsed.language as string) ?? "unknown",
     overall_risk:  (parsed.overall_risk as AuditReport["overall_risk"]) ?? "unknown",
     risk_score:    Number(parsed.risk_score ?? 0),
