@@ -60,25 +60,6 @@ npm run dev
 
 ---
 
-## Deploy to Vercel (free)
 
-1. Push this repo to GitHub
-2. Go to [vercel.com](https://vercel.com) → Import project → select this repo
-3. Set root directory to `frontend`
-4. Add environment variable: `NEXT_PUBLIC_DEMO_PRIVATE_KEY=0x...`
-5. Deploy
-
----
-
-## Contract — GenLayer Studionet
-
-**Address:** see `frontend/src/lib/contract.ts`
-
-| Method | Description |
-|--------|-------------|
-| `preview_audit(source_code, policy)` | AI audit via `simulateWriteContract` — instant, no gas |
-| `get_audit_count()` | Total audits stored on-chain |
-
----
 
 
