@@ -1,11 +1,8 @@
 <svg width="100%" viewBox="0 0 680 480" xmlns="http://www.w3.org/2000/svg">
-
   <circle cx="340" cy="240" r="175" fill="#0D0F2B"/>
 
-  <path d="M285 195 A55 55 0 0 1 395 195" stroke="#FF8A80" stroke-width="9" fill="none" stroke-linecap="round"/>
-  <line x1="285" y1="195" x2="395" y2="195" stroke="#FF8A80" stroke-width="9" stroke-linecap="round"/>
-  <line x1="296" y1="218" x2="384" y2="218" stroke="#FF8A80" stroke-width="9" stroke-linecap="round"/>
-  <line x1="307" y1="241" x2="373" y2="241" stroke="#FF8A80" stroke-width="9" stroke-linecap="round"/>
-
-  <text x="340" y="308" text-anchor="middle" font-family="Orbitron, 'Courier New', monospace" font-size="22" font-weight="500" fill="#FF8A80">AI CODE AUDITOR</text>
+  <path d="M210 245 A130 130 0 0 1 470 245" stroke="#a78bfa" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <line x1="210" y1="245" x2="470" y2="245" stroke="#a78bfa" stroke-width="14" stroke-linecap="round"/>
+  <line x1="230" y1="283" x2="450" y2="283" stroke="#a78bfa" stroke-width="14" stroke-linecap="round"/>
+  <line x1="252" y1="321" x2="428" y2="321" stroke="#a78bfa" stroke-width="14" stroke-linecap="round"/>
 </svg>

@@ -92,7 +92,7 @@ body::after {
 .logo-img {
   height: 48px;
   width: auto;
-  filter: drop-shadow(0 0 6px rgba(255,138,128,0.6)) drop-shadow(0 0 14px rgba(255,138,128,0.3));
+  filter: drop-shadow(0 0 6px rgba(167,139,250,0.8)) drop-shadow(0 0 16px rgba(124,58,237,0.5));
 }
 
 .logo-sub {
