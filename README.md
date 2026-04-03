@@ -81,11 +81,4 @@ npm run dev
 
 ---
 
-## GenLayer Hackathon Compliance
 
-| Requirement | Status |
-|---|---|
-| Intelligent Contract in Python | ✅ `contracts/ai_code_auditor.py` |
-| Uses `exec_prompt_session` for AI | ✅ LLM vulnerability analysis |
-| Deployed on GenLayer network | ✅ Studionet |
-| Real-world use case | ✅ Smart contract security auditing |
